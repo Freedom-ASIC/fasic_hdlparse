@@ -29,6 +29,4 @@ $(SRC_DIR)/$(FLEX_DIR)/%.yy.c: $(FLEX_DIR)/%.lex
 compile: $(C_OBJ)
 
 clean:
-	rm -rf $(FLEX_SRCS)
-	rm -rf $(INC_DIR)/flex/*.yy.h
 	rm -rf $(C_OBJ)

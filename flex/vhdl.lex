@@ -36,6 +36,9 @@ DELIMITER                   {BASIC_DELIMITER}|{COMPOUND_DELIMITER}
 
 COMMENT                     "--".*$
 
+%option reentrant
+%option noyywrap
+
 %%
 "abs"                   { printf("MATCH! %s\n", yytext); }
 "access"                { printf("MATCH! %s\n", yytext); }
@@ -143,7 +146,3 @@ COMMENT                     "--".*$
 {COMMENT}               { printf("MATCH! CO: %s\n", yytext); }
 .*                      { printf("NO MATCH!\n"); }
 %%
-
-int yywrap() {
-    return 1;
-}

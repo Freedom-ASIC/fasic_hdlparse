@@ -1,2 +1,4 @@
 build/
 *.o
+*.yy.c
+*.yy.h
